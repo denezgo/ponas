@@ -1,0 +1,81 @@
+const Express = require("express")
+
+const App = Express()
+App.all('/manifest', (Req, Res) => {
+    Res
+        .setHeader("Content-Type", "application/xml")
+        .send(`<?xml version="1.0" encoding="utf-8"?>
+<ClientManifest Timestamp= "2020-01-09T01:11:58.4290002Z" xmlns="http://schemas.microsoft.com/Wps/2011/Nexus/ClientManifest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Endpoints>
+    <Endpoint Moniker="AccessControlWebRoleEndpoint" BaseUri="https://accesscontrol.dps.mp.microsoft.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Ccp" BaseUri="https://device.ccpservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.FrontEnd.LondonCdnUrlAms" BaseUri="http://cdn.boswp.com/v1" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.FrontEnd.LondonCdnUrlHkn" BaseUri="http://cdn.boswp.com/v1" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.FrontEnd.LondonCdnUrlSn2" BaseUri="http://cdn.boswp.com/v1" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.CdnUrl.V2" BaseUri="http://cdn.boswp.com/v2" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.FrontEnd" BaseUri="https://none/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.MOWebPortalHttps" BaseUri="https://none/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNs.London.Wbo.MOWebPortal" BaseUri="http://none/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="CoNS.WifiService.ClientFrontEnd.Secure" BaseUri="https://wifiservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="DCP" BaseUri="https://dcpservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="DeviceRegistrationServiceEndpoint" BaseUri="https://deviceunlockservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="HttpsIn" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="HttpIn" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MarketplaceEdgeHttpsIn" BaseUri="https://marketplaceedgeservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MarketplaceEdgeHttpIn" BaseUri="http://marketplaceedgeservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.LocationDataLoader" BaseUri="http://collection.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.AgpsTime" BaseUri="https://agps.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.AgpsData.Unsecure" BaseUri="http://agps.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.AgpsTime.Unsecure" BaseUri="http://agps.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.LocationDataLoader.Secure" BaseUri="https://collection.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.Inference" BaseUri="http://inference.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.BeaconAdmin.Secure" BaseUri="https://beaconadmin.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.Tiles.Secure" BaseUri="https://inference.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.Tiles" BaseUri="http://inference.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.Inference.Secure" BaseUri="https://inference.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Microsoft.Wps.Location.AgpsData" BaseUri="https://agps.location.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MobiHttpIn" BaseUri="http://moservices.microsoft.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MobiHttpsIn" BaseUri="https://moservices.microsoft.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MpnShim.FrontEnd" BaseUri="http://s.notify.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="MpnShim.FrontEnd.Secure" BaseUri="https://s.notify.live.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Network.WifiCredShare.SocialProfiler" BaseUri="https://profile.wifiservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="NetworkConfigWebRole" BaseUri="https://config.scm.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="NetworkTest.NetworkTestFrontEnd" BaseUri="https://networktest.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Parp" BaseUri="https://ch1pl00.windowsphone.com/webapi/v1/applications" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="SCMFrontEndWebRole" BaseUri="https://tile.scm.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="SCMUDPEchoWorkerRole" BaseUri="udp://echo.networktest.windowsphone.com:8765/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WLIDCSSecure" BaseUri="https://manage.liveid.windowsphone.net/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WifiCS" BaseUri="http://wifics.on/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WorkflowManagementServiceWebRole.Moniker" BaseUri="https://workflowservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceAccounts" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceAutoSuggest" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceBuy" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceEdgeHttpIn" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceEdgeHttpsIn" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceImageService" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceMoServices" BaseUri="https://disco.moservices.microsoft.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceRegionOverride" BaseUri="http://onlyquerystringmatters.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceReview" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceShop" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceShopCdn" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceShopSecure" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceTelemetry" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPAppsMarketplaceTunerService" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPCom" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComAppShareP" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComAppShareS" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComFamilyRoomP" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComFamilyRoomS" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComLocationShareP" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComLocationShareS" BaseUri="http://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="WPComSignup" BaseUri="https://selfhost.windowsphonenext.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Wps.Dcs.ActivationService" BaseUri="https://devicecertificateservice.windowsphone.com/" TimeToLive="P1D"/>
+    <Endpoint Moniker="Wps.Family.RoomsServiceHttp" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Wps.Family.RoomsService" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="Wps.Family.RoomsService.Partner" BaseUri="https://www.windowsphone.com/" TimeToLive="P1MT4H"/>
+    <Endpoint Moniker="XapProcessingServiceMoniker" BaseUri="https://xapprocessingservice.windowsphone.com/" TimeToLive="P1MT4H"/>
+  </Endpoints>
+</ClientManifest>`)
+})
+
+module.exports = App

@@ -1,0 +1,8 @@
+[
+    {"name":"Discovery","domains":["discoveryservice.windowsphone.com"]},
+
+    {"name":"DeviceCertificates","domains":["devicecertificateservice.windowsphone.com"]},
+    {"name":"SiteCertificates","domains":["*.com","0.0.0.0"]},
+
+    {"name":"LoginLive","domains":["login.live.com"]}
+]
