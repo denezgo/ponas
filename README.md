@@ -29,6 +29,8 @@ A server of malivewp
 ### Maybe
 - [ ] Xbox Live services
 - [ ] Maps and geolocation
+### Not planned
+- [ ] Malive / ReWP patcher
 
 ## How to contribute?
 - For services add:
