@@ -41,10 +41,8 @@ Services.forEach(Service => {
     }
 })
 
-App.use(Express.static(Path.join(__dirname, "Files")))
-
 // error
-App.use((Req, Res, Next) => {
+App.use((Req, Res) => {
     if (!Req.error) Req.error = { error: 404, message: `Cannot ${Req.method.toUpperCase()} ${Req.path} in ${Req.hostname}.`, code: `NO_URL_IN_DOMAIN` };
     
     Res.status(Req.error.error)

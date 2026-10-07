@@ -37,9 +37,11 @@ A server of malivewp
     1. Add `<your service name>.js` to [`Services` folder](/Services/).
         > __`module.exports` is Express app__
     2. Add service in [`List.json`](/Services/List.json) by including record like this in `List`'s array:
-        ```json
-        {"name":"<your service name>","domains":[<your service domains>]}
-        ```
+        |Name|Value type|Description|
+        |-|-|-|
+        |`name`|`string`|Name of service|
+        |`domains`|`array` of `string`s|Array of domains (can be `*.*`/`*.*.*.*`/etc)|
+        |`monikers`|**OPTIONAL**. `array` of "moniker"s|Array of monikers - aliases for domains, used by `discoveryservice` (see [`Discovery` service](/Services/Discovery.js))| 
 
 ## How to connect my WP8.1 device to this service?
 TODO.

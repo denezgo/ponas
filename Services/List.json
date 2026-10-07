@@ -1,8 +1,47 @@
 [
-    {"name":"Discovery","domains":["discoveryservice.windowsphone.com"]},
+  {
+    "name": "Website",
+    "domains": ["windowsphone.com", "*.windowsphone.com", "*.*", "*.*.*.*"],
+    "monikers": [
+      {
+        "name": "HttpsIn",
+        "isSecure": true
+      },
+      {
+        "name": "HttpIn"
+      },
+      {
+        "name": "WPCom",
+        "isSecure": true
+      }
+    ]
+  },
 
-    {"name":"DeviceCertificates","domains":["devicecertificateservice.windowsphone.com"]},
-    {"name":"SiteCertificates","domains":["*.com","0.0.0.0"]},
+  {
+    "name": "Discovery",
+    "domains": ["discoveryservice.windowsphone.com"]
+  },
 
-    {"name":"LoginLive","domains":["login.live.com"]}
+  {
+    "name": "DeviceCertificates",
+    "domains": ["devicecertificateservice.windowsphone.com"],
+    "monikers": [
+      {
+        "name": "Wps.Dcs.ActivationService",
+        "isSecure": true
+      }
+    ]
+  },
+  { "name": "SiteCertificates", "domains": ["*.*", "*.*.*.*"] },
+
+  {
+    "name": "LoginLive",
+    "domains": ["login.live.com", "manage.liveid.windowsphone.net"],
+    "monikers": [
+      {
+        "name": "WLIDCSSecure",
+        "isSecure": true
+      }
+    ]
+  }
 ]
